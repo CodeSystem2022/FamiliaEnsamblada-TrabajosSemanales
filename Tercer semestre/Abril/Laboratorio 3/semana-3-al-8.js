@@ -1,14 +1,41 @@
-
 //MATÍAS VILLA
 //Diseñar un programa que muestre el producto de los 10 primeros números impares
-let producto=1;
-for(let contando=0;contando<=20; contando++){
-   
-    if(contando%2!=0){
-        console.log(contando); //Muestra todos los impares
-        producto *= contando
-        console.log(producto)
-    }
+let producto = 1;
+for (let contando = 0; contando <= 20; contando++) {
+  if (contando % 2 != 0) {
+    console.log(contando); //Muestra todos los impares
+    producto *= contando;
+    console.log(producto);
+  }
 }
 console.log("el producto de de los 10 primeros números impares es " + producto);
 //FIN MATIAS VILLA
+
+//Gerardo Duckwitz
+let numero,
+  aleatorio,
+  contador = 0,
+  limiteIntentos = 10;
+
+aleatorio = Math.floor(Math.random() * 100);
+
+do {
+  numero = parseInt(prompt("Digite un número: "));
+  if (numero < aleatorio) {
+    console.log("Ingrese un número mayor");
+  } else if (numero > aleatorio) {
+    console.log("Ingrese un número menor");
+  }
+  contador++;
+} while (numero !== aleatorio && contador < limiteIntentos);
+
+if (numero === aleatorio) {
+  console.log(
+    `¡Correcto! El número era ${aleatorio}, hiciste ${contador} intentos.`
+  );
+} else {
+  console.log(
+    `Agotaste tus ${limiteIntentos} intentos. El número era ${aleatorio}.`
+  );
+}
+//Fin ejercicio Gerardo Duckwitz
