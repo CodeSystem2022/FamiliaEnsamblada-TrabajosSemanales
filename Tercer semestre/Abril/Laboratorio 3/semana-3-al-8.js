@@ -39,3 +39,17 @@ if (numero === aleatorio) {
   );
 }
 //Fin ejercicio Gerardo Duckwitz
+
+//Yesica López
+//Pedir un número N, y mostrar todos los números
+//del 1 al N.
+console.log("Digite un número: ");
+let numero = parseInt(prompt());
+
+let i = 1;
+while (i <= numero) {
+  console.log(i);
+  i++;
+}
+
+// fin Yesica López
