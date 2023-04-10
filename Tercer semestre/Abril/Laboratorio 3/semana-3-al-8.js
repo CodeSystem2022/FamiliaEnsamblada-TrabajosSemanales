@@ -67,3 +67,17 @@ while (i <= n) {
 }
 
 // fin Jose Remaggi
+
+//Anabel ALESCI
+//Diseñar un programa que muestre el producto de los 10 primeros números impares
+let p = 1;
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 != 0) { //Verifico si el numero es impar
+    console.log(i); //Muestra todos los impares
+    p *= i;
+    console.log(p);
+  }
+}
+console.log("el producto de los 10 primeros números impares es " + p);
+
+//Fin Anabel Alesci

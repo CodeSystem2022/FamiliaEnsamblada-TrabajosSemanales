@@ -62,3 +62,26 @@ orden1.agregarComputadora(computadoraB);
 orden1.agregarComputadora(computadoraC);
 
 //Fin ejercicio Jose Remaggi
+
+// Ejercicio Anabel Alesci
+
+Monitor monitorMacbook = new Monitor("Apple", 13);
+Teclado tecladoMacbook = new Teclado("USB-C", "Apple");
+Raton ratonMacbook = new Raton("USB-C", "Apple");
+Computadora computadoraMacbook = new Computadora("Computadora Apple", monitorMacbook, tecladoMacbook, ratonMacbook);
+
+Monitor monitorDell = new Monitor("Dell", 14);
+Teclado tecladoDell = new Teclado("USB", "Dell");
+Raton ratonDell = new Raton("USB", "Dell");
+Computadora computadoraDell = new Computadora("Computadora Dell", monitorDell, tecladoDell, ratonDell);
+
+Monitor monitorAorus = new Monitor("Aorus", 15.6);
+Teclado tecladoAorus = new Teclado("USB", "Aorus");
+Raton ratonAorus = new Raton("Bluetooth", "Aorus");
+Computadora computadoraAorus = new Computadora("Computadora Aorus", monitorAorus, tecladoAorus, ratonAorus);
+
+orden1.agregarComputadora(computadoraApple);
+orden1.agregarComputadora(computadoraDell);
+orden1.agregarComputadora(computadoraAorus);
+
+//Fin ejercicio Anabel Alesci
