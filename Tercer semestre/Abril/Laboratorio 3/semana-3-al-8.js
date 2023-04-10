@@ -81,3 +81,18 @@ for (let i = 0; i <= 20; i++) {
 console.log("el producto de los 10 primeros números impares es " + p);
 
 //Fin Anabel Alesci
+
+// Jesús Mercado
+
+// 1° Ejercicio Ciclo While - Laboratorio I - Python:
+// Corresponde a la Clase 8 - Ciclo While y For
+// Imprimir números del 0 al 5 con el ciclo while
+let contador = 0;
+let maximo = 5;
+while(contador <= maximo) {
+    console.log(contador);
+    contador++;
+}
+console.log('Fin del ciclo while');
+
+// Fin Jesús Mercado
