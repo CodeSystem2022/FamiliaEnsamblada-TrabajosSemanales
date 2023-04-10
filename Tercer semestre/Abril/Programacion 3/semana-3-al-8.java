@@ -39,3 +39,26 @@ Monitor monitorLenovo = new Monitor("Lenovo", 23);
         Computadora computadoraApple = new Computadora("Computadora Apple", monitorApple, tecladoApple, ratonApple);
 
 //fin Yesica López
+
+// Ejercicio Jose Remaggi
+
+Monitor monitorA = new Monitor("A", 24);
+Teclado tecladoA = new Teclado("USB", "A");
+Raton ratonA = new Raton("USB", "A");
+Computadora computadoraA = new Computadora("Computadora A", monitorA, tecladoA, ratonA);
+
+Monitor monitorB = new Monitor("B", 24);
+Teclado tecladoB = new Teclado("USB", "B");
+Raton ratonB = new Raton("USB", "B");
+Computadora computadoraB = new Computadora("Computadora B", monitorB, tecladoB, ratonB);
+
+Monitor monitorC = new Monitor("C", 24);
+Teclado tecladoC = new Teclado("USB", "C");
+Raton ratonC = new Raton("USB", "C");
+Computadora computadoraC = new Computadora("Computadora C", monitorC, tecladoC, ratonC);
+
+orden1.agregarComputadora(computadoraA);
+orden1.agregarComputadora(computadoraB);
+orden1.agregarComputadora(computadoraC);
+
+//Fin ejercicio Jose Remaggi

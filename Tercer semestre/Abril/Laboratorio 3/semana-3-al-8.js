@@ -53,3 +53,17 @@ while (i <= numero) {
 }
 
 // fin Yesica López
+
+//Jose Remaggi
+//Pedir un número N, y mostrar todos los números
+//del 1 al N.
+console.log("Digite un número: ");
+let n = parseInt(prompt());
+
+let i = 1;
+while (i <= n) {
+  console.log(i);
+  i++;
+}
+
+// fin Jose Remaggi
