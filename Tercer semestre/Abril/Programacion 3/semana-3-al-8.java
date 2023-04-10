@@ -20,3 +20,22 @@ orden1.agregarComputadora(computadoraAlienware);
 orden1.agregarComputadora(computadoraMix);
 
 //Fin ejercicio Gerardo Duckwitz
+
+//Yesica López
+
+Monitor monitorLenovo = new Monitor("Lenovo", 23);
+        Teclado tecladoLenovo = new Teclado("USB", "Lenovo");
+        Raton ratonLenovo = new Raton("USB", "Lenovo");
+        Computadora computadoraLenovo = new Computadora("Computadora Lenovo", monitorLenovo, tecladoLenovo, ratonLenovo);
+
+        Monitor monitorDell = new Monitor("Dell", 27);
+        Teclado tecladoDell = new Teclado("USB", "Dell");
+        Raton ratonDell = new Raton("USB", "Dell");
+        Computadora computadoraDell = new Computadora("Computadora Dell", monitorDell, tecladoDell, ratonDell);
+
+        Monitor monitorApple = new Monitor("Apple", 24);
+        Teclado tecladoApple = new Teclado("Bluetooth", "Apple");
+        Raton ratonApple = new Raton("Bluetooth", "Apple");
+        Computadora computadoraApple = new Computadora("Computadora Apple", monitorApple, tecladoApple, ratonApple);
+
+//fin Yesica López
