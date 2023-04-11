@@ -129,3 +129,24 @@ Monitor monitorAsus = new Monitor("Asus", 32);
         Computadora computadoraMix = new Computadora("Computadora Mix", monitorMix, tecladoAsus, ratonMSI);
 
 // Fin Jesús Mercado
+
+
+//Victoria Zaccaro
+
+          Monitor monitorSamsung = new Monitor("Samsung", 27);
+    Teclado tecladoCorsair = new Teclado("USB", "Corsair");
+    Raton ratonSteelSeries = new Raton("USB", "SteelSeries");
+    Computadora computadoraSamsung = new Computadora("Computadora Samsung", monitorSamsung, tecladoCorsair, ratonSteelSeries);
+        
+        
+   Monitor monitorAcer = new Monitor("Acer", 24);
+Teclado tecladoLogitech = new Teclado("USB", "Logitech");
+Raton ratonRazer = new Raton("USB", "Razer");
+Computadora computadoraAcer = new Computadora("Computadora Acer ", monitorAcer, tecladoLogitech, ratonRazer);
+
+Monitor monitorAsus = new Monitor("Asus", 32);
+Raton ratonLogitech = new Raton("USB", "Logitech");
+Computadora computadoraAsus = new Computadora("Computadora Asus ", monitorAsus, tecladoCorsair, ratonLogitech);
+
+
+//Fin Victoria Zaccaro
