@@ -96,3 +96,33 @@ while(contador <= maximo) {
 console.log('Fin del ciclo while');
 
 // Fin Jesús Mercado
+
+
+//Ejercicio Victoria Zaccaro
+//Pedir el día, mes y año de una fecha e
+//indicar si la fecha es correcta. Suponiendo que
+//todos los meses son de 30 días.
+console.log("Digite el día: ");
+let dia = parseInt(prompt());
+
+console.log("Digite el mes: ");
+let mes = parseInt(prompt());
+
+console.log("Digite el año: ");
+let anio = parseInt(prompt());
+
+if (dia != 0 && dia <= 30) {
+  if (mes != 0 && mes <= 12) {
+    if (anio != 0 && anio <= 2022) {
+      console.log("La fecha ingresada es: " + dia + "/" + mes + "/" + anio);
+    } else {
+      console.log("Fecha incorrecta, año incorrecto");
+    }
+  } else {
+    console.log("Fecha incorrecta, mes incorrecto");
+  }
+} else {
+  console.log("Fecha incorrecta, día incorrecto");
+}
+
+//Fin ejercicio Victoria Zaccaro
