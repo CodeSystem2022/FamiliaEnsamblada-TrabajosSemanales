@@ -85,3 +85,30 @@ orden1.agregarComputadora(computadoraDell);
 orden1.agregarComputadora(computadoraAorus);
 
 //Fin ejercicio Anabel Alesci
+
+//Ejercicio Matías Villa
+
+ //computadora1 Lenovo
+ Monitor monitorLenovo = new Monitor ("Lenovo", 45);
+ Teclado tecladoLenovo = new Teclado ("Lenovo","Mecanico");        
+ Raton ratonLenovo = new Raton("Lenovo", "Bluetooth");        
+ Computadora computadoraLenovo = new Computadora("Computadora Lenovo", monitorLenovo, tecladoLenovo, ratonLenovo);
+        
+  //computadora2 Acer
+  Monitor monitorAcer = new Monitor("Acer", 42);
+  Teclado tecladoAcer = new Teclado("Acer","Mecanico");
+  Raton ratonAcer = new Raton("Acer","Bluetooth");
+  Computadora computadoraAcer= new Computadora("Acer", monitorAcer, tecladoAcer, ratonAcer);
+        
+  //computadora3 Samsung
+  Monitor monitorSamsung = new Monitor ("Samsung", 72);
+  Teclado tecladoSamsung = new Teclado("Samsung", "Mecanico");
+  Raton ratonSamsung = new Raton("Samsung","Inhalambrico");
+  Computadora computadoraSamsung = new Computadora("Samsung", monitorSamsung, tecladoSamsung, ratonSamsung);
+
+  //Orden
+  orden1.agregarComputadora(computadoraLenovo);
+  orden1.agregarComputadora(computadoraAcer);
+  orden1.agregarComputadora(computadoraSamsung);
+        
+//FIN MATÍAS VILLA.
