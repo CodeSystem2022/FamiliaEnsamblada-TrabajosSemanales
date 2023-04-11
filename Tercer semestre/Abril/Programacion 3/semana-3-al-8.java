@@ -112,3 +112,20 @@ orden1.agregarComputadora(computadoraAorus);
   orden1.agregarComputadora(computadoraSamsung);
         
 //FIN MATÍAS VILLA.
+
+// Jesús Mercado
+Monitor monitorAsus = new Monitor("Asus", 32);
+        Teclado tecladoAsus = new Teclado("USB", "Asus");
+        Raton ratonAsus = new Raton("USB", "Asus");
+        Computadora computadoraAsus = new Computadora("Computadora Asus", monitorAsus, tecladoAsus, ratonAsus);
+
+        Monitor monitorMSI = new Monitor("MSI", 27);
+        Teclado tecladoMSI = new Teclado("USB", "MSI");
+        Raton ratonMSI = new Raton("USB", "MSI");
+        Computadora computadoraMSI = new Computadora("Computadora MSI", monitorMSI, tecladoMSI, ratonMSI);
+
+        Monitor monitorMix = new Monitor("Acer", 27);
+
+        Computadora computadoraMix = new Computadora("Computadora Mix", monitorMix, tecladoAsus, ratonMSI);
+
+// Fin Jesús Mercado
