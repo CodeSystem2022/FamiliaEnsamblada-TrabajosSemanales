@@ -34,3 +34,22 @@ for(let j = (numeros2.length)-1; j >= 0; j--){
 				console.log("|"+i+"| -> "+numeros[i]);
 			}
 //Fin Ejercicio Yesica Lòpez
+
+/*
+Ejercicio Jesús Mercado
+
+Corresponde a: Programacion II - Java, 
+Clase 11: Arreglos o Arrays - 11.7 Ejercicio con Arreglos 1
+
+Enunciado: Leer 5 números, guardarlos en un arreglo y
+mostrarlos en el mismo orden introducidos.
+*/
+
+const numeros = [12, 3, 45, 21, 34];
+console.log(numeros);
+
+for(let i = 0; i < numeros.length; i++) {
+  console.log('El elemento ' + i + ' del arreglo es: ' + numeros[i]);
+}
+
+// Fin Ejercicio Jesús Mercado
