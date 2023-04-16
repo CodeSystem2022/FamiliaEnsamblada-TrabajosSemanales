@@ -53,3 +53,31 @@ for(let i = 0; i < numeros.length; i++) {
 }
 
 // Fin Ejercicio Jesús Mercado
+
+//Ejercicios Gerardo Duckwitz
+
+//Creacion de Array o arreglos
+//let autos = new Array("BMW", "Volvo", "Ford", "Fiat", "Audi"); Esta es la sintaxis vieja
+const autos = ["BMW", "Volvo", "Ford", "Fiat", "Audi"]; //Esta es la sintaxis nueva
+console.log(autos);
+//Recorremos los elementos del arreglo
+console.log(autos[0]);
+for (let i = 0; i < autos.length; i++) {
+  console.log(i + " : " + autos[i]);
+}
+//Modificamos los elementos del arreglo
+autos[1] = "Mercedes Benz";
+console.log(autos[1]);
+//Agregamos nuevos valores al arreglo
+autos.push("Toyota");
+console.log(autos);
+//Otras formas de agregar elementos al arreglo
+autos[autos.length] = "Porche";
+console.log(autos);
+//Tercera forma de agregar elementos teniendo CUIDADO
+autos[6] = "Renault";
+console.log(autos);
+//Como preguntar si es un Array o Arreglo
+console.log(Array.isArray(autos)); //Devuelve un booleano
+console.log(autos instanceof Array); //Preguntamos is la variable es una instalacia de la clase Array
+//Fin ejercicios Gerardo Duckwitz
