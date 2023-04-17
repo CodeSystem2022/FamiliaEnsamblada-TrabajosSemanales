@@ -82,6 +82,19 @@ console.log(Array.isArray(autos)); //Devuelve un booleano
 console.log(autos instanceof Array); //Preguntamos is la variable es una instalacia de la clase Array
 //Fin ejercicios Gerardo Duckwitz
 
+//Ejercicio Matías Villa
+
+//Leer 5 numeros, escribirlos en un arreglo y mostrarlos en el orden introducido
+
+let miArray=[1,22,92,77,54]
+
+for (let i=0; i<5; i++){
+    miArray[i]}
+    
+console.log(miArray);
+
+//FIN MATÍAS VILLA
+
 
 //Ejercicio Victoria Zaccaro
 //Ejercicio1: Leer 5 números, guardarlos en un arreglo y mostrarlos en el mismo orden introducidos.
