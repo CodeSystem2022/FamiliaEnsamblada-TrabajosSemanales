@@ -95,3 +95,15 @@ function sumarTodo(){
     return suma;
 }
 // Fin Ejercicio Jesús Mercado
+//Jose Remaggi
+let  result = sumarTodo(5, 4, 13, 10, 9);
+console.log("La suma es: ",result);
+
+function sumAll(){
+    let sum = 0;
+    for(let i = 0; i < arguments.length; i++){
+        sum += arguments[i]; // arguments es para arreglos
+    }
+    return sum;
+}
+//Fin Ejercicio Jose Remaggi
