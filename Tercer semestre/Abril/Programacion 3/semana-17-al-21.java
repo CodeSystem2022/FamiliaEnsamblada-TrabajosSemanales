@@ -70,3 +70,30 @@ public class TestEnumeraciones {
     }
 }
 //Fin ejercicios Victoria Zaccaro
+//Ejercicios Jose Remaggi
+package test;
+
+public class TestArgumentosVariables {
+
+    public static void main(String[] args) {
+        imprimirNumeros(1, 2, 3);
+        imprimirNumeros(4, 5);
+        variosParametros("Jose", "Remaggi", 6, 7, 8);
+    }
+
+    private static void variosParametros(String nombre, String apellido, int... numeros) {
+        System.out.println("Nombre: " + nombre+ "Apellido: "+apellido);
+       
+
+        imprimirNumeros(numeros);
+    }
+
+    private static void imprimirNumeros(int... numeros) {
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("Elementos: " + numeros[i]);
+
+        }
+
+    }
+}
+// Fin Ejercicio Jose Remagi
