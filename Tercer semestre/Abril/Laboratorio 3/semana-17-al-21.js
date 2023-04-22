@@ -184,3 +184,32 @@ cambioValorObjeto(persona);
 console.log(persona);
 
 //Fin Ejercicios Yesica López
+
+
+//Ejercicios Gerardo Duckwitz
+miFuncion(8, 3); // Esto se lo conoce como hoisting
+function miFuncion(a, b) {
+  // console.log("Sumamos: " + (a+b));
+  return a + b;
+}
+//Llamamos a la funcion
+miFuncion(2, 3);
+
+let resultado = miFuncion(4, 7);
+console.log(resultado);
+
+//Declaramos una funcion de tipo expresion o anonima
+let x = function (a, b) {
+  return a + b;
+};
+resultado = x(3, 4);
+console.log(resultado);
+
+//Funciones tipo self e invoking
+(function (a, b) {
+  console.log("Ejecutando la funcion " + (a + b));
+})(3, 4);
+
+console.log(typeof miFuncion);
+
+//Fin ejercicios Gerardo Duckwitz
