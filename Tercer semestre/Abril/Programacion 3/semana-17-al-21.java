@@ -147,7 +147,7 @@ public class TestEnum {
 
 package test;
 
-import enumeraciones.Continentes;
+//import enumeraciones.Continentes;
 import enumeraciones.Dias;
 
 
