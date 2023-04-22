@@ -141,3 +141,57 @@ public class TestEnum {
     }
 }
 //Fin Ejercicio Anabel Alesci
+
+//MATÍAS VILLA
+
+
+package test;
+
+import enumeraciones.Continentes;
+import enumeraciones.Dias;
+
+
+public class TestEnumeraciones {
+    public static void main(String[] args) {
+        System.out.println("Dia 1:"+Dias.LUNES); //por defauld cada enumeración es una cadena. se trata como una lista de valores
+        IndicarDiaSemana(Dias.LUNES);
+        //System.out.println("Contienentes No 4."+Continentes.AMERICA);
+        //System.out.println("No. de paises en el 4to contienente:"+Continentes.AMERICA.getPaises());
+        //System.out.println("No. de habitantes en el 4to contienente:"+Continentes.AMERICA.getHabitantes());
+    }
+    
+    private static void IndicarDiaSemana(Dias dias){//otro metodo
+            switch(dias){
+                case LUNES:
+                    System.out.println("Primer dia de la semana: ");
+                    break;
+                case MARTES:
+                    System.out.println("Segundo Día de la semana");
+                    break;
+                case MIERCOLES:
+                    System.out.println("Tercer día de la semana:");
+                    break;
+                case JUEVES:
+                    System.out.println("Cuarto día de la semana");
+                    break;
+                case VIERNES:
+                    System.out.println("Quinto día de la semana: ");
+                    break;
+                case SABADO:
+                    System.out.println("Sexto día de la semana: ");
+                    break;
+                case DOMINGO:
+                    System.out.println("Septimo día de la semana");
+                    break;
+                default:
+                System.out.println("Error");
+                break;
+                        
+                      
+    
+    }
+}
+    
+}
+
+//FIN MATÍAS VILLA
