@@ -195,3 +195,54 @@ public class TestEnumeraciones {
 }
 
 //FIN MATÍAS VILLA
+
+//Ejercicio Yesica Lòpez
+
+
+package enumeraciones;
+
+public enum Continentes {
+    AFRICA(53,"1,2 billones"),
+    EUROPA(46,"1.1 billones"),
+    ASIA(44,"1.9 millones"),
+    AMERICA(34,"150.2 millones"),
+    OCEANIA(14,"1.2 billones");
+    
+    private final int paises;
+    private final String habitantes;
+    
+    Continentes(int paises, String habitantes){
+        this.paises=paises;
+        this.habitantes=habitantes;
+    }
+    
+    //Mètodo Get
+    public int getPaises(){
+        return this.paises;
+    }
+    public String getHabitantes(){
+        return this.habitantes;
+    }
+}
+
+
+
+package enumeraciones;
+
+public class test {
+     public static void main(String[] args) {
+         System.out.println("***Continente No. 1: "+Continentes.AFRICA);
+         System.out.println("No. de paìses en el 1er. continente: "
+                 +Continentes.AFRICA.getPaises());
+         System.out.println("No. de habitantes en el 1er. continente: "
+                 +Continentes.AFRICA.getHabitantes());
+         
+         System.out.println("***Continente No. 4: "+Continentes.AMERICA);
+         System.out.println("No. de paìses en el 4to. continente: "
+                 +Continentes.AMERICA.getPaises());
+         System.out.println("No. de habitantes en el 4to. continente: "
+                 +Continentes.AMERICA.getHabitantes());
+}
+}
+
+//Fin Ejercicio Yesica Lòpez
