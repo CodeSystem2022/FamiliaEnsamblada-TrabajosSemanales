@@ -74,3 +74,47 @@ public class TestAutoboxingUnboxing {
 }
 
 //Fin Ejercicio Anabel Alesci
+
+//Ejercicio Jose Remaggi
+package domain;
+public class Person {
+    private String name;
+
+    public Persona(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "name=" + name + '}';
+    }     
+}
+
+package test;
+
+import domain.Person;
+
+public class TestForEach {
+    public static void main(String[] args){
+        int ages[]={10,12,14,18}; 
+        for(int age: ages){ 
+           System.out.println("age= "+age);
+        }
+        Persona people[]={new Person("Ash"), new Persona("Misty"),new Persona("Brock")};
+                
+        //ForEach
+        for(Persona persona : personas){
+            System.out.println("Persona= "+persona);
+        }
+          
+    }
+}
+//Fin Ejercicio Jose Remaggi
