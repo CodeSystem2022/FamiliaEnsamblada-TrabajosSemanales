@@ -110,3 +110,21 @@ persona.apellida = "Betancud"; //Cambiamos dinamicamente el valor de un objeto
 delete persona.apellida; //Eliminamos el error
 console.log(persona);
 //Fin Gerardo Duckwitz
+
+//Ejercicio Victoria Zaccaro
+//Distinta formas de imprimir un objeto
+//Numero 1: la mas sencilla forma de concatenar proiedades
+console.log(persona.nombre + ", " + persona.apellido);
+
+//Numero 2: A traves de un ciclo for in
+for (nombrePropiedad in persona) {
+  console.log(persona[nombrePropiedad]);
+}
+//Numero 3: La funcion Object.values()
+let personaArray = Object.values(persona);
+console.log(personaArray);
+
+//Numero 4: Utilizaremos el metodo JSON.stringify()
+let personaString = JSON.stringify(persona);
+console.log(personaString);
+//Fin Victoria Zaccaro
