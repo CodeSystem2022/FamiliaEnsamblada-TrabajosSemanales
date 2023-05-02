@@ -169,3 +169,20 @@ for(propiedad in persona){
 
 //FIN MATÍAS VILLA
 //FIN EJERCICIO MATÍAS VILLA
+
+// Ejercicio Jesús Mercado
+// 1.3 - Otras Formas de Crear un Objeto:
+let persona2 = new Object(); // Debe crear un nuevo objeto en memoria
+persona2.nombre = 'Juan';
+persona2.direccion = 'Salada 14';
+persona2.telefono = '5492618282821';
+console.log(persona2.telefono);
+console.log('Creamos un Nuevo Objeto');
+console.log(persona['apellido']); // Accedemos como si fuera un arreglo
+
+// for in y accedemos a un objeto como si fuera un arreglo
+for(propiedad in persona){
+    console.log(propiedad);
+    console.log(persona[propiedad]);
+}
+// Fin Ejercicio Jesús Mercado
