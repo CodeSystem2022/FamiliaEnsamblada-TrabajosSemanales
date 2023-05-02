@@ -170,3 +170,31 @@ public class TestModificadoresAcceso {
 }
 
 //Fin ejercicio Victoria Zaccaro
+
+
+//Ejercicos MATÍAS VILLA
+
+
+package test;
+
+import paquete1.Clase1;
+import paquete2.Clase3;
+//modificar de acceso public esta clase puede ser usado por otra clase externa o del misimo paquete
+public class testModificadoresAcceso {
+    public static void main(String[] args) {
+        Clase1 clase1 = new Clase1();
+        System.out.println("clase1 = " + clase1.atributoPublic);
+        clase1.meotodoPublico();
+        Clase3 claseHija = new Clase3();
+        System.out.println("claseHija = " + claseHija);        
+        
+        
+        
+      }
+    
+
+    
+    }
+
+
+//fin ejercicio matías Villa
