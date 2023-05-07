@@ -21,5 +21,20 @@ Familia ensamblada, trabajos semanales
 <br/>
 <p>Semana del 15 al 19: Victoria</p>
 <br/>
+<p>Semana del 22 al 26: Gerardo</p>
+<br/>
+<hr/>
+<h3>Junio</h3>
+<p>Semana del 29 al 2: Yesica</p>
+<br/>
+<p>Semana del 5 al 9: Matias</p>
+<br/>
+<p>Semana del 12 al 16: Jesus</p>
+<br/>
+<p>Semana del 19 al 23: Ani</p>
+<br/>
+<p>Semana del 26 al 30: Jose</p>
+<br/>
+<hr/>
 
 
