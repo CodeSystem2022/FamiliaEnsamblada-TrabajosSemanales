@@ -45,3 +45,42 @@ public class TestSobreescritura {
     }
 }
 //Fin Ejercicio Yesica López
+
+//ejercicios Matías Villa
+
+package domain;
+
+public class Gerente extends Empleado{
+    //atributos
+    private String departamento;
+    
+    //constructor
+    public Gerente(String nombre,double sueldo,String departamento){
+    //acceder a los atributos de la clase padre
+    //se llama por medio de super
+    super(nombre,sueldo);
+    //inicializar atributo
+    this.departamento=departamento;
+    
+    }
+    //Sobreescribir metodo
+    @Override 
+    public String obtenerDetalles(){
+      return super.obtenerDetalles()+", Departamento: "+this.departamento; //llamamos al metodo de la clase padre con super
+              
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+    
+    
+    
+}
+
+
+//FIN EJERCICIOS MATÍAS
