@@ -259,6 +259,19 @@ console.log(persona);
 
 //Fin ejercicios Victoria Zaccaro
 
+//Jose Remaggi
+let  result = sumarTodo(5, 4, 13, 10, 9);
+console.log("La suma es: ",result);
+
+function sumAll(){
+    let sum = 0;
+    for(let i = 0; i < arguments.length; i++){
+        sum += arguments[i]; // arguments es para arreglos
+    }
+    return sum;
+}
+//Fin Ejercicio Jose Remaggi
+
 //EJERCICIO MATÍAS VILLA
 
 //Hosting Se llama a la funcion antes de definirla o despues 
@@ -370,3 +383,4 @@ cambiarValorObjeto(persona)
 console.log(persona);
 
 //FIN MATÍAS VILLA
+
