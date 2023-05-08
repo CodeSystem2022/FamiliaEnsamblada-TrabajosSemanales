@@ -160,7 +160,7 @@ public class Empleado {
 }
 //Fin ejercicio Victoria Zaccaro
 
-//Ejercicio Gerardo Duckwitz
+//Ejercicio  Gerardo Duckwitz
 package test;
 
 import domain.*;
