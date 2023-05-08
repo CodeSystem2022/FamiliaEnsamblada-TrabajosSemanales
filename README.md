@@ -1,5 +1,5 @@
 
- 
+ <body background-color:#3f4d55>
   <center><h1>Familia Ensamblada</h1>
   <h2>Trabajos Semanales</h2>
   <img src="https://i.pinimg.com/originals/79/9e/0d/799e0d7779f6ea6c3a89885ff60c55af.gif" alt="Descripción de la imagen">
@@ -82,6 +82,6 @@
     </tr>
       
   </table> </center>
-
+<body>
 
 
