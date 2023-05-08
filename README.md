@@ -1,10 +1,10 @@
 
- <body background-color:#3f4d55>
-  <center><h1>Familia Ensamblada</h1>
-  <h2>Trabajos Semanales</h2>
-  <img src="https://i.pinimg.com/originals/79/9e/0d/799e0d7779f6ea6c3a89885ff60c55af.gif" alt="Descripción de la imagen">
+ <div style="background-color: grey">
+  <h1 aling="center">Familia Ensamblada</h1>
+  <h2 aling="center">Trabajos Semanales</h2>
   
-</center>
+ <center> <img src="https://i.pinimg.com/originals/79/9e/0d/799e0d7779f6ea6c3a89885ff60c55af.gif" width:"20px", height:"auto"></center>
+
 
 <br/>
   <center>
@@ -82,6 +82,6 @@
     </tr>
       
   </table> </center>
-<body>
+<div>
 
 
