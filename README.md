@@ -1,31 +1,5 @@
-<!Doctype html>
-<html>
-  <head>
-    
-    <meta charset="UTF-8">
-    <style type="text/css">
-                   
-        body{background-image: url("");
-        background-color:#3f4d55;}
-        table{
-            background: linear-gradient(12deg, rgba(167, 238, 201, 0.6) 0%, 
-            rgba(23, 165, 241, 0.14) 100%);
-            text-align: center;
-            color:rgb(236, 176, 116);
-            border-radius: 5%;
-            padding:1%
-        }
-         td{
-            border: 2px solid rgb(192, 189, 189);    
-      }
-      h1,h2,u{color:aliceblue;}
-      img{width:20%;
-          height:auto;
-          }
 
-    </style>
-  </head>
-  <body>
+ 
   <center><h1>Familia Ensamblada</h1>
   <h2>Trabajos Semanales</h2>
   <img src="https://i.pinimg.com/originals/79/9e/0d/799e0d7779f6ea6c3a89885ff60c55af.gif" alt="Descripción de la imagen">
@@ -108,7 +82,6 @@
     </tr>
       
   </table> </center>
-</body>
-</html>
+
 
 
