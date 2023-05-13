@@ -24,3 +24,59 @@ console.log(madre.nombreCompleto());
 console.log(madre.telefono);
 
 //Fin ejercicio Gerardo Duckwitz
+
+//Victoria Zaccaro
+//Diferentes formas de crear objetos
+//caso numero 1
+let miObjeto = new Object();
+//caso numero 2
+let miObjeto2 = {};
+//caso string 1
+let miCadena1 = new String("Hola");
+//caso string 2
+let miCadena2 = "Hola";
+
+// caso con numeros 1
+let miNumero1 = new Number(1); //Es formal no recomendable
+//caso con numeros 2
+let miNumero2 = 1; //Sintaxis recomendada
+
+//caso boolean 1
+let miBoolean1 = new Boolean(false); //formal
+//caso boolean 2
+let miBoolean2 = false; //recomendada
+
+//caso Arreglos 1
+let miArreglo1 = new Array(); //Formal
+//caso Arreglos 2
+let miArreglo2 = []; //recomendada
+
+//caso funciones 1
+let miFuncion1 = new (function () {})(); //Formal
+//caso funciones 2
+let miFuncion2 = function () {}; //recomendada
+
+Persona3.prototype.telefono = "123456789123";
+console.log(padre.telefono);
+console.log(madre.telefono);
+//Uso de call
+let persona4 = {
+  nombre: "Juan",
+  apellido: "Perez",
+  nombreCompleto2: function (titulo, telefono) {
+    return titulo + ": " + this.nombre + " " + this.apellido + ", " + telefono;
+    // return this.nombre + " " + this.apellido;
+  },
+};
+let persona5 = {
+  nombre: "Carlos",
+  apellido: "Lara",
+};
+console.log(persona4.nombreCompleto2("Lic.", "123456789"));
+console.log(persona4.nombreCompleto2.call(persona5, "Ing.", "987654321"));
+
+//Metodo Apply
+let arreglo = ["Ing.", "542618282821"];
+console.log(persona4.nombreCompleto2.apply(persona5, arreglo));
+
+//Fin Victoria Zaccaro
