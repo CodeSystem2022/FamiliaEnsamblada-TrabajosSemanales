@@ -80,3 +80,22 @@ let arreglo = ["Ing.", "542618282821"];
 console.log(persona4.nombreCompleto2.apply(persona5, arreglo));
 
 //Fin Victoria Zaccaro
+
+//Ejercicio Jose Remaggi
+
+let personaA = {
+  nombre: 'Jose',
+  apellido: 'Remaggi',
+  email:'jremaggi@gmail.com',
+  edad:36,
+  nombreCompleto: function(){
+    return this.nombre+''+this.apellido;
+  },
+  get nombreEdad(){
+    return this.nombre+', Edad: '+this.edad;
+  }
+ 
+}
+console.log('Comenzamos a utilizar el metodo get')
+console.log(personaA.nombreEdad);
+//Fin ejercicio Jose Remaggi
