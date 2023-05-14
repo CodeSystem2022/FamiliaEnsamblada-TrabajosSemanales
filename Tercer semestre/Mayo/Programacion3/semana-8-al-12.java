@@ -75,3 +75,26 @@ public enum TipoEscritura {
     }
 }
 //Fin Ejercicio Anabel Alesci
+
+//Victoria Zaccaro
+
+package domain;
+
+public enum TipoEscritura {
+    CLASICO ("Escritura a mano"),
+    MODERNO ("Escritura digital");
+    
+    private final String descripcion;
+    
+    private TipoEscritura(String descripcion){ //Constructor
+        this.descripcion = descripcion;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+    
+    
+}
+
+//Fin Victoria Zaccaro
