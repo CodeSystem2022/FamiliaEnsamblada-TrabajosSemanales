@@ -133,3 +133,31 @@ persona.lang = 'en';
 console.log(persona.lang);
 
 //Fin Ejercicio Anabel Alesci
+
+//Ejercicio Yesica López
+//Utilizaremos el método JSON.stringify
+console.log('Distinta formas de imprimir un objeto: forma 4');
+let personaString=JSON.stringify(persona);
+console.log(personaString);
+
+console.log('Comenzamos a utilizar el método get');
+console.log(persona.nombreEdad);
+
+console.log('Comenzamos con el método GET y SET para idiomas');
+persona.lang='en';
+console.log(persona.lang);
+
+function Persona3(nombre, apellido,email){//constructor
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.email=email;
+}
+
+let padre= new Persona3('Leo','Gomez','gomez@gmail.com');
+padre.nombre='Luis';
+console.log(padre);
+
+let madre= new Persona3('Yesica','López','lopez@gmail.com');
+console.log(madre);
+
+//Fin Ejercicio Yesica López
