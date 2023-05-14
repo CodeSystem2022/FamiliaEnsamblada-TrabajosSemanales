@@ -1,3 +1,4 @@
+
 //Ejercicio Gerardo Duckwitz
 console.log(persona.nombreEdad);
 console.log("Comenzamos con el metodo get y set para idiomas");
@@ -99,3 +100,36 @@ let personaA = {
 console.log('Comenzamos a utilizar el metodo get')
 console.log(personaA.nombreEdad);
 //Fin ejercicio Jose Remaggi
+
+//Ejercicio Anabel Alesci
+//Objeto
+let persona = {
+    nombre: 'Mariela',
+    apellido: 'Gomez',
+    email: 'maru@gmail.com',
+    edad: 35,
+    idioma: 'es',
+    
+    get lang(){
+        return this.idioma.toUpperCase();//Convierte las minusculas a mayusculas
+    },
+    set lang(Lang){ //Convierte el idioma
+        this.idioma = Lang.toUpperCase();
+    },
+
+    nombreCompleto: function(){
+        return this.nombre+ 'this'+ this.apellido;
+    },
+    get nombreEdad(){//este es el metodo get
+        return 'El nombre es: ' +this.nombre+', Edad: '+ this.edad;
+    }
+   
+}
+console.log('Comenzamos a utilizar el método get');
+console.log(persona.nombreEdad);
+
+console.log('Comenzamos con el metodo get y set para idiomas');
+persona.lang = 'en';
+console.log(persona.lang);
+
+//Fin Ejercicio Anabel Alesci

@@ -1,3 +1,4 @@
+// Ejercicio Jose Remaggi
 import domain.*
 public class TestClaseObject{
     public static void main(String[] args){
@@ -19,3 +20,58 @@ public class TestClaseObject{
         }
     }
 }
+//Fin Ejercicio Jose Remaggi
+//Ejercicio Anabel Alesci
+package domain;
+
+
+public class Escritor extends Empleado{
+    final TipoEscritura tipoEscritura;
+    
+    public Escritor(String nombre, double sueldo, TipoEscritura tipoEscritura){
+        super(nombre, sueldo);
+        this.tipoEscritura = tipoEscritura;
+    }
+    //Método para sobreescribir
+    @Override
+    public String obtenerDetalles(){
+        return super.obtenerDetalles()+", Tipo Escritura: " + tipoEscritura.getDescription();
+    }
+    
+    @Override
+    public String toString(){
+        return "Escritor{" + "tipoEscritura=" + tipoEscritura + '}'+ "" + super.toString();
+    }
+    
+    public TipoEscritura getTipoEscritura(){
+        return this.tipoEscritura;
+    }
+    
+}
+public class Empleado {
+    protected String nombre;
+    protected double sueldo;
+    public Empleado(String nombre, double sueldo){
+        this.nombre = nombre;
+        this.sueldo = sueldo;
+    }
+    //Metodo para la sobreescritura
+    public String obtenerDetalles(){
+        return "Nombre: "+ this.nombre+" , Sueldo: "+ this.sueldo;
+        
+    }
+}
+public enum TipoEscritura {
+    CLASICO ("Escritura a mano"),
+    MODERNO ("Escritura digital");
+    
+    private final String descripcion;
+    private TipoEscritura(String descripcion){//constructor
+       this.descripcion = descripcion; 
+    }
+    //Metodo get
+    public String getDescription(){
+        return this.descripcion;
+    }
+}
+//Fin Ejercicio Anabel Alesci
