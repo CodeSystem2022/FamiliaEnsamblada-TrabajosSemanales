@@ -126,3 +126,32 @@ public class Escritor extends Empleado{
 }
 
 //Fin ejercicio Gerardo Duckwitz
+
+//Ejercicio de Yesica López
+package domain;
+public abstract class FiguraGeometrica {
+    protected String tipoFigura;
+    
+    //Constructor
+    protected FiguraGeometrica(String tipoFiguara){
+        this.tipoFigura = tipoFigura;    
+    }
+     
+    //Método abstracto
+    public abstract void dibujar();
+    
+    //Agregamos el GET y SET
+    public String getTipoFigura(){
+        return tipoFigura;
+    }
+    
+    public void setTipoFigura(String tipoFigura){
+        this.tipoFigura = tipoFigura; 
+    }
+    
+    @Override
+    public String toString(){
+        return "FiguraGeometrica("+"tipoFigura="+tipoFigura+'}';
+    }
+}
+//Fin Ejercicio Yesica López
