@@ -161,3 +161,26 @@ let madre= new Persona3('Yesica','López','lopez@gmail.com');
 console.log(madre);
 
 //Fin Ejercicio Yesica López
+
+// Ejercicio Jesús Mercado:
+// 5.3 - Constructores de Objetos:
+function Persona3(nombre, apellido, email){ // Constructor
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre + ' ' + this.apellido;
+    }
+}
+let padre = new Persona3('Leo', 'Lopez', 'lopezl@gmail.com');
+padre.nombre = 'Luis'; // modificamos el nombre
+padre.telefono = '5491234512345'; // Una propiedad exclusiva del objeto padre
+console.log(padre);
+console.log(padre.nombreCompleto()); // <utilizamos la función
+
+let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
+console.log(madre);
+console.log(madre.telefono); // La propiedad no está definida
+console.log(madre.nombreCompleto());
+
+// Fin Ejercicio Jesús Mercado
