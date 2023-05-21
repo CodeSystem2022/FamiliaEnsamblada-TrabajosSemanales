@@ -148,4 +148,69 @@ console.log(persona2.nombre);
 // console.log(persona2);
 //Fin Victoria Zaccaro
 
+//Ejercicio Jose Remaggi
 
+class Persona{ // Clase padre
+  constructor(nombre, apellido){
+      this._nombre = nombre;
+      this._apellido = apellido;
+  }
+
+  get nombre(){
+      return this._nombre;
+  }
+  
+  set nombre(nombre){
+      this._nombre = nombre;
+  }
+
+  get apellido(){
+      return this._apellido;
+  }
+
+  set apellido(apellido){
+      this._apellido = apellido;
+  }
+}
+
+class Empleado extends Persona{ // Clase hija
+  constructor(nombre, apellido, departamento){
+      super(nombre, apellido);
+      this._departamento = departamento; 
+  }
+
+  get departamento(){
+      return this._departamento;
+  }
+
+  set departamento(departamento){
+      this._departamento = departamento;
+  }
+}
+
+let persona1 = new Persona('Jose','Remaggi');
+console.log(persona1.nombre);
+persona1.nombre = 'Jose Luis';
+console.log(persona1.nombre);
+// console.log(persona1);
+
+let persona2 = new Persona('Anabel', 'Alesci');
+console.log(persona2.nombre);
+persona2.nombre = 'Anabel Gisella';
+console.log(persona2.nombre);
+// console.log(persona2);
+
+// Ejercicio Métodos get y set para el apellido:
+console.log(persona1.apellido);
+persona1.apellido = 'Pietrasanta';
+console.log(persona1.apellido);
+
+// Ejercicio Métodos get y set para el apellido:
+console.log(persona2.apellido);
+persona2.apellido = 'Flores';
+console.log(persona2.apellido);
+
+let empleado1 = new Empleado('Horacio', 'Remaggi', 'Contabilidad');
+console.log(empleado1);
+console.log(empleado1.nombre);
+//Fin Ejercicio Jose Remagi
