@@ -214,3 +214,55 @@ let empleado1 = new Empleado('Horacio', 'Remaggi', 'Contabilidad');
 console.log(empleado1);
 console.log(empleado1.nombre);
 //Fin Ejercicio Jose Remagi
+
+//Ejercicio Anabel Alesci
+// let persona5 = new Persona("Laura", "Carrizo");
+class Persona {
+  constructor(nombre, apellido) {
+    this._nombre = nombre;
+    this._apellido = apellido;
+  }
+  get nombre() {
+    return this._nombre;
+  }
+  set nombre(nombre) {
+    this._nombre = nombre;
+  }
+  get apellido() {
+    return this._apellido;
+  }
+  set apellido(apellido) {
+    this._apellido = apellido;
+  }
+}
+class Empleado extends Persona {
+  //Clase hija
+  constructor(nombre, apellido, departamento) {
+    super(nombre, apellido);
+    this._departamento = departamento;
+  }
+  get departamento() {
+    return this._departamento;
+  }
+  set departamento(departamento) {
+    this._departamento = departamento;
+  }
+}
+
+let persona1 = new Persona("Laura", "Carrizo");
+console.log(persona1.nombre);
+persona1.nombre = "Nazarena Ruel";
+console.log(persona1.nombre);
+// console.log(persona1);
+
+let persona2 = new Persona("Luisina", "Scipioni");
+console.log(persona2.nombre);
+persona2.nombre = "Noe Rio";
+console.log(persona2.nombre);
+// console.log(persona2);
+
+let empleado1 = new Empleado("Ana", "Laura", "Nutricion");
+console.log(empleado1);
+console.log(empleado1.nombre);
+
+//Fin Ejercicio Anabel Alesci
