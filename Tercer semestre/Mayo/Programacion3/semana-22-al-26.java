@@ -157,3 +157,34 @@ public class ImplementacionOracle implements IAccesoDatos{
     
 }
 //Fin ejercicio Gerardo Duckwitz
+    
+    //####Ejercicios Matías Villa#####
+    
+    
+package test;
+
+
+import eccesodatos.*;
+
+public class TestInterfaces {
+        
+
+
+    public static void main(String[] args) {
+        IAccesoDatos datos = new ImplementacionMySQL();
+        //datos.listar();
+        
+        //imprimir(datos);
+        datos = new ImplementacionOracle();
+        datos.listar();
+    }
+    
+    public static void imprimir(IAccesoDatos datos){
+        datos.listar();
+    }
+}
+
+    
+
+
+    //###Fin Ejercicios Matías####
