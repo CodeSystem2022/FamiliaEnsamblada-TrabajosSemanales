@@ -249,3 +249,107 @@ console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
 console.log(persona1.toString());
 //Fin ejercicio Gerardo Duckwitz
+
+//###Ejercicios Matías Villa###
+{
+    class Persona { //clase padre
+    constructor(nombre, apellido){
+        this._nombre= nombre; //inicializar atributos
+        this._apellido=apellido;
+    }
+
+    //Métodos set y get
+    //get no se puede llamar igual que nuestra propiedad 
+    
+    get nombre(){
+        return this._nombre; //acceder a la clase indirectamente por medio del metodo get
+       
+    }
+
+    get apellido(){
+        return this._apellido 
+    }
+    //set modifica o lee atributo
+        set nombre(nombre){
+            this._nombre=nombre;
+
+
+        }
+        set apellido(apellido){
+            this._apellido=apellido;
+        
+            
+        }
+        //Definir metodo en la clase padre para heredar en la clase hija
+        nombreCompleto(){
+            return this._nombre+' '+this.apellido;
+
+        }
+
+        //Método toString. Regresa un String
+        //Sobreescribiendo el método de la clase padre object
+        toString(){ 
+            //se aplica el polimorfismo que significa = multiples formas en tiempo de ejecución
+            //El método que se ejecuta depende si es una referencia de tipo padre o hija
+            return this.nombreCompleto();
+        }
+
+    }   
+
+let persona1= new Persona('Martín','Perez');
+console.log(persona1.nombre);
+persona1.nombre = 'Juan Carlos'; //modificamos el atributo
+persona1.apellido='Lopez'
+console.log(persona1.nombre); 
+console.log(persona1.apellido)
+//console.log(persona1);
+let persona2=new Persona('Carlos','Lara');
+console.log(persona2.nombre);
+persona2.nombre='Maria Laura';
+persona2.apellido='Di Maria'
+console.log(persona2.nombre)
+console.log(persona2.apellido)
+//console.log(persona2);
+
+
+
+
+
+class Empleado extends Persona{ //clase hija
+     constructor(nombre,apellido,departamento){ //agregar los parametros de la clase padre 
+
+        super(nombre,apellido)//llamos al constructor de la calse padre por medio de super. entre parentesis se pasan los valores
+        this._departamento=departamento;
+
+
+
+     }
+
+     get departamento(){
+        return this._departamento
+
+
+     }
+
+     set departamento(departamento){
+        this._departamento = departamento
+     }
+
+     //sobreescritura
+     nombreCompleto(){
+        return super.nombreCompleto()+', '+this._departamento;
+    
+    } 
+
+}
+
+//objeto de la calse hija
+
+let empleado1 = new Empleado('Maria','Jimenez','Sistemas');
+//console.log(empelado1);
+console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto());
+console.log(empleado1.toString())
+console.log(persona1.toString());
+
+    //####Fin EJercicios Matías Villa#####
