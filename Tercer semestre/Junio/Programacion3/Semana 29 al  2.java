@@ -170,3 +170,69 @@ public class testJavaBean {
     }
 }
 //fin ejercicio victoria zaccaro
+//Ejercicio Matías Villa..
+package domain;
+
+import java.io.Serializable;
+
+
+public class Persona implements Serializable { //serializable convierte nuestro objeto a 0 y 1 
+    private String nombre;
+    private String apellido;
+    
+    //Constructor Vacio esto es obligatorio para que sea un javabeans
+    public Persona(){
+        
+        
+    }
+    
+    //Método Get y Set
+    public Persona(String nombre, String apellido){
+        this.nombre= nombre;
+        this.apellido=apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    //tostring
+    @Override
+    public String toString() {
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + '}';
+    }
+
+    
+
+}
+
+//TestJavaBeans
+package test;
+
+import domain.Persona;
+
+public class TestJavaBeans {
+    public static void main(String[] args) {
+        Persona persona = new Persona();
+        persona.setNombre("Juan");
+        persona.setApellido("Perez");
+        System.out.println("persona = " + persona);
+        System.out.println("Persona Nombre"+ persona.getNombre());
+        System.out.println("Persona Apellido"+ persona.getApellido());
+    }
+}
+
+
+//Fin ejercicio Matías Villa
