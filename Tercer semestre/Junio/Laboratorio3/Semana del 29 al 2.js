@@ -704,3 +704,195 @@ console.log(persona5.toString());
 let persona6 = new Persona("Javier", "Flores");
 console.log(persona6.toString());
 //Fin Ejercicio Victoria Zaccaro
+
+
+//Ejercicio Matías Villa
+
+
+
+//let persona3 = new Persona('Carla','Ponce'); esto esta mal.
+//no es posible crear objetos antes de crear la clase
+
+
+class Persona { //clase padre
+    static contadorPersonas = 0 ;
+    //static contadorObjetosPersona = 0 //Atributo estatico que pertenece a la clase pero no a un objeto
+   // email='Valor default email'; //atributo no estatico
+    
+   //Creación de constantes staticas
+   static get MAX_OBJ(){ //este método simula una constante
+    return 5;
+   }
+
+    constructor(nombre, apellido){
+        this._nombre= nombre; //inicializar atributos
+        this._apellido=apellido;
+        if(Persona.contadorPersonas < Persona.MAX_OBJ){
+            this.idPersona=++Persona.contadorPersonas; }
+        else{
+            console.log('Se ha superado el MAximo de objetos permitidos');
+        }
+       // Persona.contadorObjetosPersona++;
+       
+       // console.log('Se incrementa el contador: '+Persona.contadorObjetosPersona);
+    }
+
+    //Métodos set y get
+    //get no se puede llamar igual que nuestra propiedad 
+    
+    get nombre(){
+        return this._nombre; //acceder a la clase indirectamente por medio del metodo get
+       
+    }
+
+    get apellido(){
+        return this._apellido 
+    }
+    //set modifica o lee atributo
+        set nombre(nombre){
+            this._nombre=nombre;
+
+
+        }
+        set apellido(apellido){
+            this._apellido=apellido;
+        
+            
+        }
+        //Definir metodo en la clase padre para heredar en la clase hija
+        nombreCompleto(){
+            return this.idPersona+' '+this._nombre+' '+this.apellido;
+
+        }
+
+        //Método toString. Regresa un String
+        //Sobreescribiendo el método de la clase padre object
+        toString(){ 
+            //se aplica el polimorfismo que significa = multiples formas en tiempo de ejecución
+            //El método que se ejecuta depende si es una referencia de tipo padre o hija
+            return this.nombreCompleto();
+        }
+
+
+        static saludar(){ //Este método se asocia a la clase pero no a los objetos
+            console.log('Saludos desde el método static');
+            
+        } 
+
+        static saludar2(persona){
+            console.log(persona.nombre+' '+persona.apellido);
+        }
+
+        
+
+    }   
+
+let persona1= new Persona('Martín','Perez');
+console.log(persona1.nombre);
+persona1.nombre = 'Juan Carlos'; //modificamos el atributo
+persona1.apellido='Lopez'
+console.log(persona1.nombre); 
+console.log(persona1.apellido)
+//console.log(persona1);
+let persona2=new Persona('Carlos','Lara');
+console.log(persona2.nombre);
+persona2.nombre='Maria Laura';
+persona2.apellido='Di Maria'
+console.log(persona2.nombre)
+console.log(persona2.apellido)
+//console.log(persona2);
+
+
+//persona1.saludar(); no se usa desde el objeto se usa desde la clase
+Persona.saludar(); 
+Persona.saludar2(persona1)
+
+
+
+
+
+
+class Empleado extends Persona{ //clase hija
+     constructor(nombre,apellido,departamento){ //agregar los parametros de la clase padre 
+
+        super(nombre,apellido)//llamos al constructor de la calse padre por medio de super. entre parentesis se pasan los valores
+        this._departamento=departamento;
+
+
+
+     }
+
+     get departamento(){
+        return this._departamento
+
+
+     }
+
+     set departamento(departamento){
+        this._departamento = departamento
+     }
+
+     //sobreescritura
+     nombreCompleto(){
+        return super.nombreCompleto()+', '+this._departamento;
+    
+    } 
+
+}
+
+//objeto de la calse hija
+
+let empleado1 = new Empleado('Maria','Jimenez','Sistemas');
+//console.log(empelado1);
+console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto());
+console.log(empleado1.toString())
+console.log(persona1.toString());
+
+//se puede ejectuar el método statico desde la clase hija   
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
+
+//Acceder con medio de un objeto
+console.log(persona1.contadorObjetosPersona);
+
+//Acceder por medio de una clase
+console.log(Persona.contadorObjetosPersona);
+
+//acceder desde la clase hija
+console.log(Empleado.contadorObjetosPersona)
+
+//atributo no estatico se asocia con los objetos
+
+console.log(persona1.email);
+
+//por herencia desde la clase hija
+console.log(empleado1.email)
+
+//acceder desde la clase no es posible
+console.log(Persona.email)
+
+
+console.log(persona1.toString());
+console.log(persona2.toString())
+console.log(empleado1.toString());
+console.log(Persona.contadorPersonas);
+
+
+//crear nuevos objetos de la clase persona
+let persona3 = new Persona('Carla','Pertosi');
+console.log(persona3.toString());
+console.log(Persona.contadorPersonas);
+
+
+//utilización del método 
+console.log(Persona.MAX_OBJ);
+//Persona.MAX_OBJ = 10; //no se puede modificar porque es statico
+
+let persona4 = new Persona('Franco','Diaz');
+console.log(persona4.toString())
+
+let persona5= new Persona('Liliana','Paz')
+console.log(persona5.toString())
+//FIN EJERCICIO MATÍAS
