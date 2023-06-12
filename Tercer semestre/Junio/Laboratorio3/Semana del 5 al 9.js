@@ -394,3 +394,54 @@ class Cliente extends Persona{
     }
 }
 //Fin Ejercicio Yesica López
+
+
+//Ejercicio Gerardo Duckwitz
+class Empleado extends Persona {
+  static contadorEmpleados = 0;
+  constructor(nombre, apellido, edad, sueldo) {
+    super(nombre, apellido, edad);
+    this._idEmpleado = ++Empleado.contadorEmpleados;
+    this._sueldo = sueldo;
+  }
+  get idEmpleado() {
+    return this._idEmpleado;
+  }
+  get sueldo() {
+    return this._sueldo;
+  }
+  set sueldo(sueldo) {
+    this._sueldo = sueldo;
+  }
+  toString() {
+    return `
+        ${super.toString()}
+        ${this._idEmpleado}
+        ${this._sueldo}`;
+  }
+}
+class Cliente extends Persona {
+  static contadorClientes = 0;
+  constructor(nombre, apellido, edad, fechaRegistro) {
+    super(nombre, apellido, edad);
+    this._idCliente = ++Cliente.contadorClientes;
+    this._fechaRegistro = fechaRegistro;
+  }
+  get idCliente() {
+    return this._idCliente;
+  }
+  get fechaRegistro() {
+    return this._fechaRegistro;
+  }
+  set fechaRegistro(fechaRegistro) {
+    this._fechaRegistro = fechaRegistro;
+  }
+  toString() {
+    return `
+        ${super.toString()}
+        ${this._idCliente}
+        ${this._fechaRegistro}`;
+  }
+}
+//Fin ejercicio Gerardo Duckwitz
+
