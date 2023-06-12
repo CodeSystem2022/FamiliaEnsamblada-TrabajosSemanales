@@ -357,3 +357,93 @@ public class CalculadoraUTN{
     }// Fin main
 }// Fin clase
 //Fin ejercicio victoria zaccaro
+                               
+//Ejercicio Matías Villa
+ import java.util.Scanner;
+
+public class CalculadoraUTN {
+        public static void main(String[] args) {
+            //Incorporamos Scanner para que el usuario ingrese valores
+            Scanner entrada = new Scanner(System.in);
+            System.out.println("***** Aplicación Calculadora *****");
+            mostrarMenu();
+            while(true) {
+
+                System.out.print("Operación a realizar?");
+
+                try {
+                    var operacion = Integer.parseInt(entrada.nextLine());
+                if (operacion >= 1 && operacion <= 4) {
+                    ejecutarOperacion(operacion, entrada);
+                    //Fin switch
+                } //Fin del if
+
+
+                else if (operacion == 5) {
+                    System.out.println("Hasta pronto...");
+                    break;
+                } else {
+                    System.out.println("Opción Erronea: " + operacion);
+                }
+
+                //Imprimimos un salto de linea
+                System.out.println();
+
+            }//Fin try
+                catch (Exception e){
+                    System.out.println("ocurrio un error:= " + e.getMessage());
+                }
+        }//Fin While
+    }//Fin del main
+
+    private static void mostrarMenu(){
+
+        //Mostramos el menú
+        System.out.println("""
+                    1.Sumar
+                    2.Resta
+                    3.Multiplicación
+                    4.División
+                    5.Salir
+                    """);
+
+
+    }
+
+    private static void ejecutarOperacion(int operacion,Scanner entrada){
+
+        System.out.print("Digite el valor para operando1: ");
+        var operando1 = Double.parseDouble(entrada.nextLine());
+        System.out.print("Digite el valor para operando2: ");  //Quitamos el ln para que se imprima en la misma linea
+        var operando2 = Double.parseDouble(entrada.nextLine());
+
+
+        //creamos swicht para realizar las operaciones
+        Double resultado;
+        switch (operacion) {
+            case 1 -> { //suma
+                resultado = operando1 + operando2;
+                System.out.println("resultado de la suma = " + resultado);
+            }
+            case 2 -> { //resta
+                resultado = operando1 - operando2;
+                System.out.println("resultado de la resta= " + resultado);
+            }
+            case 3 -> { //multiplicación
+                resultado = operando1 * operando2;
+                System.out.println("resultado de la multiplicación = " + resultado);
+
+            }
+            case 4 -> { //división
+                resultado = operando1 / operando2;
+                System.out.println("resultado de la división = " + resultado);
+            }
+
+            default -> System.out.println("Opción erronea" + operacion);
+
+        }
+
+    }
+
+}//Fin clase
+//$$$$$$$ FIN EJERCIO MATÍAS $$$$$$$$
