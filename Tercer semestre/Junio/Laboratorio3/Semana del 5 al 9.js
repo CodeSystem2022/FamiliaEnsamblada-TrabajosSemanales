@@ -368,3 +368,29 @@ let c2 = new Cliente('Hermione', 'Granger', 17, new Date());
 console.log(cliente2.toString());
 // Fin Ejercicio Jose Remaggi
 
+//Ejercicio Yesica López
+class Cliente extends Persona{
+    static contadorClientes = 0;
+
+    constructor(nombre, apellido, edad, fechaRegistro){
+        super(nombre, apellido, edad);
+        this._idCliente = ++Cliente.contadorClientes;
+        this._fechaRegistro = fecharegistro;
+    }
+
+    get idCliente(){
+         return this._idCliente;
+    }
+
+    set fecharegistro(fecharegistro){
+        this._fechaRegistro = fecharegistro;
+    }
+
+    toString(){
+        return `
+        ${super.toString()}
+        ${this._idCliente}
+        ${this._fechaRegistro}`;
+    }
+}
+//Fin Ejercicio Yesica López
