@@ -93,3 +93,43 @@ console.log(producto1.toString());
 console.log(producto2.toString());
 
 //Fin Ejercicio  Anabel Alesci
+
+
+//Ejercicio Gerardo Duckwitz
+export default class Orden {
+  static idOrden = 0;
+  static get MAX_PRODUCTOS() {
+    return 5;
+  }
+  constructor() {
+    this._idOrden = ++Orden.idOrden;
+    this._productos = [];
+  }
+  agregarProducto(producto) {
+    if (this._productos.length < Orden.MAX_PRODUCTOS) {
+      this._productos.push(producto);
+    } else {
+      console.log("No se pueden agregar más productos");
+    }
+  }
+  calcularTotal() {
+    let totalVenta = 0;
+    for (let producto of this._productos) {
+      totalVenta += producto.precio;
+    }
+    return totalVenta;
+  }
+  mostrarOrden() {
+    let productosOrden = "";
+    for (let producto of this._productos) {
+      productosOrden += "\n{" + producto.toString() + "}";
+    }
+    console.log(`
+            Orden: ${this._idOrden}
+            Total: $${this.calcularTotal()}
+            Productos: ${productosOrden}
+        `);
+  }
+}
+
+//Fin ejercicio Gerardo Duckwitz
