@@ -302,3 +302,54 @@ orden1.mostrarOrden();
 orden2.mostrarOrden();
 
 // Fin Ejercicio Jesús Mercado
+
+
+//Ejercicio Matías Villa
+
+class Orden{
+    static contadorOrdenes = 0;
+    static getMAX_PRODUCTOS(){return 5;}//Método que simula constante
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._productos = [];
+        this._contadorProductosAgregados = 0;
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarProducto(producto){
+        if(this._productos.length < Orden.getMAX_PRODUCTOS()){
+            this._productos.push(producto); //Tenemos 2 tipos de sintaxis
+            this._productos[this._contadorProductosAgregados++] = Producto; //forma 2 de hacerlo
+        }
+        else{
+            console.log('No se pueden agregar más productos');
+        }
+    }//Fin método agregar producto
+    
+    //Metodo calcular total
+    calcularTotal(){
+        let totalVenta = 0;
+        for (let producto of this._productos){ //recorre el array
+            totalVenta += producto.precio; 
+
+        }//Fin ciclo for
+
+        return totalVenta;
+    }//Fin método calcular total
+
+    mostrarOrden(){
+        let productosOrden = ' ';
+        for(let producto of this._productos){;
+        productosOrden += '\n{'+producto.toString()+' }';
+
+    }//Fin del ciclo for 
+    console.log(`Orden: ${this._idOrden}, Total: $${this.calcularTotal}, Productos:${productosOrden}`);
+
+}//Fin metodo mostrarOrden
+
+}//Fin Clase orden
+
+//Fin ejercicio Matías. 
