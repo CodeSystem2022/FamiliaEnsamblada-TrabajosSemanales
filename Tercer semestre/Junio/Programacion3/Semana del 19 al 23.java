@@ -141,3 +141,34 @@ public class main {
         }//fin main
 }//fin clase
 // Fin Ejercicio Victoria Zaccaro
+
+
+//Ejercicio Gerardo Duckwitz
+package UTN.conexion;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexion {
+    public static Connection getConnection(){
+        Connection conexion =  null;
+        //Variables para conectarnos a la base de datos
+        var baseDatos = "estudiantes2022";
+        var url = "jdbc:mysql://localhost:3306/"+baseDatos;
+        var usuario = "root";
+        var password = "";
+
+        //cargamos la clase del driver de mysql en memoria
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conexion = DriverManager.getConnection(url, usuario, password);
+
+        }catch (ClassNotFoundException | SQLException e){
+            System.out.println("Ocurrio un error en la conexion");
+        }
+        return conexion;
+        }//Fin metiodo Coneection
+}
+
+//Fin Gerardo Duckwitz
