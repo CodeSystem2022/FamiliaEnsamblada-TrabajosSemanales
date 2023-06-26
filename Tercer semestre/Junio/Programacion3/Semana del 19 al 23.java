@@ -101,3 +101,43 @@ public class Main{
 }//Fin de clase
 
 //Fin Ejercicio Yesica López
+
+//ejercicio Victoria Zaccaro
+
+package UTN.conexion;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexion {
+    public static Connection getConnection(){
+        Connection conexion= null;
+        //variables para conectarnos a la base de datos
+        var baseDatos="estudiantes2023";
+        var url = "jdbc:mysql://localhost:3306/" + baseDatos;
+        var usuario = "root";
+        var password = "admin";
+
+        //cargamos la clase del driver de mysql en memoria
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conexion = DriverManager.getConnection(url, usuario, password);
+        } catch (ClassNotFoundException | SQLException e){
+            System.out.println("Ocurrió un error en la conexión: "+e.getMessage());
+        }//fin catch
+        return conexion;
+    }//Fin método getConnection
+}
+package UTN;
+import UTN.conexion.Conexion;
+public class main {
+    public static void main(String []args) {
+        var conexion = Conexion.getConnection();
+        if(conexion != null)
+            System.out.println("Conexion exitosa "+conexion);
+        else
+            System.out.println("error al conectarse");
+
+        }//fin main
+}//fin clase
+// Fin Ejercicio Victoria Zaccaro
