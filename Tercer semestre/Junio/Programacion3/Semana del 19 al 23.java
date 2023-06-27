@@ -172,3 +172,52 @@ public class Conexion {
 }
 
 //Fin Gerardo Duckwitz
+
+//Ejercicio Matías Villa
+
+package UTN.conexion;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class conexion {
+    public static Connection getConnection(){
+        Connection conexion= null;
+        //Variables para conectarnos a la base de datos
+        var baseDatos="estudiantes2022";
+        var url = " jdbc:mysql://localhost:3306/"+baseDatos;
+        var usuario = "root";
+        var pasword = "admin";
+
+        //cargamos la clase del driver mysql en memoria
+    try{
+        class.forName("com.mysql.cj.jdbc.Driver");
+        conexion = DriverManager.getConnection(url, usuario, pasword);
+        } catch(ClassNotFoundException | SQLException e){
+        System.out.println("Ocurrio un error en la conexión"+e.getMessage());
+    }//Fin catch
+        return conexion;
+    }//Fin método Connection
+}
+
+
+//Main.java
+package UTN;
+
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+public class Main {
+    public static void main(String[] args) {
+        var conexion = Conexion.getConnection();
+        if(conexion != null){
+            System.out.println("Conexión exitosa"+conexion);
+
+            else
+            System.out.println("Error al conectarse");
+        }//Fin if
+        }//Fin clase
+    }//Fin main
+
+
+//Fin ejercicio Matías
