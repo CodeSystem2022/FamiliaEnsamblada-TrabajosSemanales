@@ -221,3 +221,48 @@ public class Main {
 
 
 //Fin ejercicio Matías
+
+// Ejercicio Jesús Mercado:
+
+package UTN.conexion;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexión {
+    public static Connection getConnection(){
+        Connection conexion = null;
+        // Variables para conectarnos a la base de datos
+        String baseDatos = "estudiantes2022";
+        String url = "jdbc:mysql://localhost:3306/"+baseDatos;
+        String usuario = "root";
+        String password = "admin";
+
+        // cargamos la clase del driver de mysql en memoria:
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conexion = DriverManager.getConnection(url, usuario, password);
+        } catch (ClassNotFoundException | SQLException e){
+            System.out.println("Ocurrió un error en la conexión: "+e.getMessage());
+        } // Fin catch
+        return conexion;
+    } // Fin método Connection
+}
+
+package UTN.conexion;
+
+import java.sql.Connection;
+
+public class Main {
+    public static void main(String[] args) {
+        Connection conexion = Conexión.getConnection();
+        if (conexion != null){
+            System.out.println("Conexión exitosa: "+conexion);
+        } else {
+            System.out.println("Error al conectarse");
+        } // Fin if
+    } // Fin main
+} // Fin clase
+
+// Fin Ejercicio Jesús Mercado.
