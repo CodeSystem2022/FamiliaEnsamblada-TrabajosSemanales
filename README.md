@@ -85,3 +85,5 @@
 <div>
 
 
+<br/>
+<p>Todos los integrantes del grupo participamos en todas las tareas</p>
